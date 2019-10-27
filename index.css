@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'Comics';
+  src: url('assets/fonts/Comics.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CS Nancy';
+  src: url('assets/fonts/CS\ Nancy.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+
+html {
+  background: url(assets/images/pixel_art_8_bit_retro_games-1364327.png);
+  background-size: auto 100%;
+}
+
+body {
+  max-width: 1440px;
+  height: 970px;
+  margin: 0 auto;
+  font-family: Roboto;
+  background-color: rgba(255, 255, 255, 0.897);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  height: 48px;
+  box-shadow: 0 6px 3px -4px rgba(0, 0, 0, 0.425);
+  background: linear-gradient(to bottom, rgba(33, 189, 85, 0.692) 35%, rgba(245, 221, 7, 0.836) 50%);
+}
+
+header .menu {
+  margin-left: 10px;
+  background: url(assets/icons/nav-icon.svg);
+}
+
+header h1 {
+  margin-top: 9px;
+  margin-left: 50px;
+  font-family: CS Nancy, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+main {
+  display: flex;
+  font-family: Comics;
+}
+
+.control-panel {
+  width: 228px;
+  margin-top: 79px;
+  margin-left: 29px;
+  background: linear-gradient(to bottom, rgba(255, 230, 0, 0.822) 13%, rgba(250, 192, 0, 0.836) 20%, rgba(245, 170, 7, 0.836) 40%, white 50%, white 60%, rgba(255, 0, 0, 0.719) 70%);
+}
+
+.control-panel .upper-panel {
+  height: 250px;
+  box-shadow: 0 -3px 3px 0px rgba(45, 51, 49, 0.281);
+}
+
+.control-panel .upper-panel__item {
+  margin-left: 19px;
+  height: 48px;
+  width: 196px;
+  font-family: Comics;
+  font-weight: bold;
+  line-height: 48px;
+  background: blue;
+}
+
+.control-panel .upper-panel__item span {
+  margin-left: 50px;
+  font-size: 16px;
+}
+
+.control-panel .upper-panel__item-1 {
+  background: url(assets/icons/fill-drip.svg) no-repeat 0 50%;
+}
+
+.control-panel .upper-panel__item-2 {
+  background: url(assets/icons/eye-dropper.svg) no-repeat 0 50%;
+  border-bottom: 1px solid #75713b;
+}
+
+.control-panel .upper-panel__item-3 {
+  background: url(assets/icons/arrows-alt.svg) no-repeat 0 50%;
+}
+
+.control-panel .upper-panel__item-4 {
+  background: url(assets/icons/exchange-alt.svg) no-repeat 0 50%;
+}
+
+.control-panel .lower-panel {
+  margin-top: 200px;
+  padding-bottom: 15px;
+  box-shadow: 0 3px 3px 0px rgba(45, 51, 49, 0.281);
+}
+
+.control-panel .lower-panel__item {
+  display: flex;
+  align-items: center;
+  margin-left: 19px;
+  height: 48px;
+  width: 196px;
+  margin-bottom: 5px;
+  line-height: 48px;
+  border: 2px solid white;
+  border-radius: 5px 20px 20px 5px;
+}
+
+.control-panel .lower-panel__item-1 {
+  margin-top: 50px;
+  background: linear-gradient(to right, #48ff00 10%, white 20%);
+}
+
+.control-panel .lower-panel__item-2 {
+  background: linear-gradient(to right, #6200ff 10%, white 20%);
+}
+
+.control-panel .lower-panel__item-3 {
+  background: linear-gradient(to right, #ff1e00 10%, white 20%);
+}
+
+.control-panel .lower-panel__item-4 {
+  background: linear-gradient(to right, #0011ff 10%, white 20%);
+}
+
+.control-panel .lower-panel__item .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.control-panel .lower-panel__item span {
+  margin-left: 30px;
+}
+
+canvas {
+  z-index: 2;
+  align-self: center;
+  margin: 0 auto;
+  margin-top: 75px;
+  box-shadow: 0 0 7px rgba(13, 14, 13, 0.384);
+}
+
+.images-box {
+  display: grid;
+  justify-items: center;
+  align-content: flex-start;
+  width: 100px;
+  margin-top: 77px;
+  margin-right: 50px;
+}
+
+.images-box input[type="radio"] {
+  display: none;
+}
+
+.images-box .radio {
+  display: grid;
+  width: 100%;
+}
+
+.images-box label {
+  height: 30px;
+  margin-bottom: 16px;
+  font-family: Comics;
+  line-height: 30px;
+  text-align: center;
+  border: 2px ridge red;
+  outline: 2px solid green;
+  outline-offset: 5px;
+  outline-width: 2px;
+  -moz-outline-radius: 5px;
+  border-radius: 5px 0 0 5px;
+  background: #fce627;
+  box-shadow: 0 0 5px red;
+}
+
+.images-box input:checked+label {
+  box-shadow: 0 0 8px 3px red;
+}
+
+.images-box fieldset {
+  width: 100%;
+}
+
+.images-box fieldset input:first-child {
+  float: left;
+}
+
+.images-box fieldset input:last-child {
+  float: right;
+  margin-top: 1px;
+}
+
+.images-box fieldset legend {
+  margin-bottom: 5px;
+}
+
+.images-box .canvas-size-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100px;
+  margin-top: 40px;
+  padding: 6px;
+  border: 2px dashed green;
+}
+
+.images-box .canvas-size-form .canvas-width {
+  box-shadow: 0 0 2px red;
+  width: 45px;
+  text-align: center;
+}
+
+.images-box .canvas-size-form .canvas-height {
+  box-shadow: 0 0 2px yellow;
+  width: 40px;
+  width: 45px;
+  text-align: center;
+}
+
+.images-box .canvas-size-form .canvas-size-submit {
+  margin-top: 10px;
+  margin-left: 27px;
+  padding: 1px;
+  font-family: Comics;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.images-box .canvas-size-form .canvas-size-submit:active {
+  color: red;
+  transition: 0.1s;
+  border-color: red;
+}
