@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet/less" href="index.less">
+  <script src="/less/less.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <ul class="menu"></ul>
+    <h1>CodeJam - Palette</h1>
+  </header>
+  <main>
+    <aside class="control-panel">
+      <ul class="upper-panel">
+        <li class="upper-panel__item-1 upper-panel__item"><span>Paint bucket</span></li>
+        <li class="upper-panel__item-2 upper-panel__item"><span>Choose color</span></li>
+        <li class="upper-panel__item-3 upper-panel__item"><span>Move</span></li>
+        <li class="upper-panel__item-4 upper-panel__item"><span>Transform</span></li>
+      </ul>
+      <ul class="lower-panel">
+        <li class="lower-panel__item-1 lower-panel__item">
+          <div class="color current-color"></div><span>Current color</span>
+        </li>
+        <li class="lower-panel__item-2 lower-panel__item">
+          <div class="color prev-color"></div><span>Prev color</span>
+        </li>
+        <li class="lower-panel__item-3 lower-panel__item">
+          <div class="color color-1"></div><span>Red</span>
+        </li>
+        <li class="lower-panel__item-4 lower-panel__item">
+          <div class="color color-2"></div><span>Blue</span>
+        </li>
+      </ul>
+    </aside>
+    <canvas id="canvas" ></canvas>
+    <div class="images-box">
+      <form class="radio">
+        <input id="4" class="4x4" type="radio" name ="image" value = "1" >
+        <label for="4">4x4</label>
+        <input id="32" class="32x32" type="radio" name ="image" value = "2" >
+        <label for="32">32x32</label>
+        <input id="256" class="RS" type="radio"  name ="image" value = "3" >
+        <label for="256">256x256</label>
+      </form>
+      <form class="canvas-size-form" action="#" method="get">
+        <fieldset>
+          <legend>Input size</legend>
+          <input class="canvas-width" type="text" pattern="[0-9]{3}" placeholder="<=700">
+          <input class="canvas-height" type="text" pattern="[0-9]{3}" placeholder="<=700>">
+        </fieldset>
+
+        <input class="canvas-size-submit" type="submit" value="APPLY">
+      </form>
+    </div>
+  </main>
+  <script src="data/4x4.js"></script>
+  <script src="data/32x32.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
